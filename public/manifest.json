@@ -1,25 +1,33 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Roni Egbu's Portfolio",
+  "short_name": "Portfolio",
+  "description": "Explore the frontend developer portfolio of Roni Egbu.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "https://res.cloudinary.com/qaz2dc/image/upload/v1693760457/Portfolio/RE_uzp9vc.png",
+      "sizes": "64x64",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "https://res.cloudinary.com/qaz2dc/image/upload/v1693760457/Portfolio/RE_uzp9vc.png",
+      "sizes": "282x166",
+      "type": "image/png"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "https://res.cloudinary.com/qaz2dc/image/upload/v1693760194/Portfolio/roniegbu_vb3iz9.png",
+      "sizes": "550x470",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "categories": ["portfolio", "web development"]
 }
+
