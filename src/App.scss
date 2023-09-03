@@ -1,11 +1,24 @@
-@import './styles/prestyles';
+@import "./styles/prestyles";
 // @import './styles/nav';
-// @import './styles/home';
+@import "./styles/home";
 // @import './styles/projects';
 // @import './styles/contact';
 
-footer{
-    text-align: center;
-    width: 100%;
-    padding: 2vw;
+.date {
+  text-transform: uppercase;
+  letter-spacing: 2.8rem;
+  width: 100%;
+  text-align: center;
+  margin: 3rem auto 0;
+  height: auto;
+  white-space: pre;
+  font-style: normal;
+  font-family: "Zilla Slab", "Zilla Slab Placeholder", serif;
+//   letter-spacing: 3em;
+  line-height: 1.4;
+}
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 2vw;
 }

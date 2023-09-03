@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
 
 import Card from "../components/ProjectCard";
 
@@ -25,7 +26,7 @@ function Home() {
     <main>
       <section id="hero">
         <div className="text">
-          <h1>Roni's Portfolio</h1>
+          <h1>Roni’s Portfolio</h1>
           <p>
             Welcome to Roni's corner of the web, where the art of functional
             frontend development takes center stage. Explore a world of digital
@@ -36,14 +37,14 @@ function Home() {
             Explore Projects
           </a>
         </div>
-        <div className="img">
+        <div className="img flex column justify-center align-center">
           <img
             src="https://res.cloudinary.com/qaz2dc/image/upload/v1693761903/Portfolio/hero_ejv8zd.webp"
             alt="Hero"
           />
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="grid g-af">
         <div className="text">
           <p>Code, music, repeat! That's how I roll. 🎵</p>
           <p>
@@ -75,7 +76,7 @@ function Home() {
           designs, intricate code, and captivating visuals. Each project
           reflects my skills and dedication.
         </p>
-        <div class="portfolio-container">
+        <div class="portfolio-container grid g-af">
           {shuffledData.slice(0, 3).map((project) => (
             <Card project={project} key={project.id} />
           ))}
@@ -90,7 +91,9 @@ function Home() {
           magical and inspiring
         </h3>
         <div className="flex">
-            <Link to="/contact" className="button button-primary">Get in Touch</Link>
+          <Link to="/contact" className="button button-primary">
+            Get in Touch
+          </Link>
         </div>
       </section>
     </main>

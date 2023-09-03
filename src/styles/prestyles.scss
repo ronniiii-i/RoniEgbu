@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&family=Source+Serif+4:opsz,wght@8..60,200;8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Zilla+Slab:wght@300;400;500;600;700&display=swap");
 
 /* colors */
-$main: #f4f0ec;
-$bg: #3c3c3c;
+$black: #000000;
+$white: #ffffff;
 
 /*typography*/
-$sans: "Source Sans Pro", sans-serif;
-$serif: "Source Serif 4", serif;
+$sans: "Wix Madefor Display", sans-serif;
+$serif: "Zilla Slab", serif;
 
 :root {
   /* font-size: ; */
@@ -18,14 +18,14 @@ html {
 }
 
 body {
-  background-color: $bg;
+  background-color: $black;
 }
 
 * {
-  // transition: 0.3s all;
+  transition: 0.3s all;
   //   z-index: 0;
-  font-family: $sans;
-  color: $main;
+  font-family: $serif;
+  color: $white;
 }
 
 *,
@@ -82,40 +82,28 @@ section {
 }
 h1 {
   font-size: 4rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 h2 {
   font-size: 3rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 h3 {
   font-size: 1.7rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 h4 {
   font-size: 1.2rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 h5 {
   font-size: 1.429rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 h6,
 .big {
   font-size: 1.214rem;
-  font-family: $serif;
-  color: $main;
-  font-weight: 400;
+  font-family: $sans;
 }
 .small {
   font-size: 0.857rem;
@@ -135,7 +123,7 @@ a {
 }
 
 strong {
-  font-family: $serif;
+  font-family: $sans;
 }
 
 a {
@@ -157,6 +145,10 @@ ol {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 img::selection {
   background-color: #000;
 }
@@ -170,18 +162,31 @@ img::selection {
   text-align: center;
   background-color: transparent;
   margin: auto;
+  font-family: $sans;
+  font-weight: 600;
   &:hover {
     text-decoration: none;
   }
 }
-// .button-primary {
-//   border: 2px solid $white;
-//   &:hover {
-//     background-color: $pink;
-//     border-color: $pink;
-//     color: $white;
-//   }
-// }
+.button-primary {
+  border: 2px solid $white;
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+.grid {
+  display: grid;
+}
+.g-2-col-equal {
+  grid-template-columns: 50% 50%;
+}
+.g-af {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
 
 .full-width {
   width: 100%;
@@ -251,4 +256,58 @@ img::selection {
 
 .mar-1 {
   margin: 1rem 0;
+}
+
+.project-card {
+  // background: rgba(255, 255, 255, 0.25);
+  // // box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  // box-shadow: 24px 24px 47px rgb(0, 0, 0, 0.2), -24px -24px 47px #000000;
+  // backdrop-filter: blur(4.5px);
+  // -webkit-backdrop-filter: blur(4.5px);
+  // border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+  .img {
+    position: relative;
+    // overflow: hidden;
+    background-color: #ffffff;
+    // -webkit-filter: grayscale(0);
+    // filter: grayscale(0);
+    .button-group {
+      inset: 0;
+      background-color: transparentize($color: $black, $amount: 0.3);
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &:hover {
+      // -webkit-filter: grayscale(1);
+      // filter: grayscale(1);
+      img {
+        scale: 1.1;
+        transform: translateX(-20px) translateY(-20px);
+      }
+      .button-group {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  .project-details {
+    padding: 0 1vw;
+    h3,
+    p,
+    div {
+      margin-block: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .flex {
+      gap: 0.5rem;
+      * {
+        font-family: $sans;
+      }
+    }
+  }
 }

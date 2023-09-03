@@ -36,7 +36,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
             </a>
           ))}
         </div>
-        <div className="button-group">
+        <div className="button-group flex align-center">
           <a
             href={project.demoUrl}
             target="_blank"
