@@ -1,31 +1,31 @@
-# Create React App
+# My Portfolio
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+Welcome to my portfolio! Here you'll find a collection of my recent projects and contact information.
 
-## Deploy Your Own
+## Projects
 
-Deploy your own Create React App project with Vercel.
+Explore some of my recent projects:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+1. [Project Name 1](Project_1_Link) - Brief description.
+2. [Project Name 2](Project_2_Link) - Brief description.
+3. [Project Name 3](Project_3_Link) - Brief description.
 
-_Live Example: https://create-react-template.vercel.app/_
+## Skills
 
-## Available Scripts
+I specialize in:
 
-In the project directory, you can run:
+- HTML, CSS, JavaScript
+- Frontend Frameworks (React)
+- Responsive Web Design
+<!-- - Git Version Control -->
+<!-- - UI/UX Principles -->
 
-### `npm start`
+## Contact
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If you'd like to collaborate or have any questions, feel free to reach out:
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+- **Email:** [ronniiiip@gmail.com](mailto:ronniiiip@gmail.com)
+- **Twitter / X:** [ronniiii_i](https://www.twitter.com/ronniiii_i)
+<!-- - **GitHub:** [Your GitHub Profile URL] -->
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+Thank you for visiting my portfolio!
