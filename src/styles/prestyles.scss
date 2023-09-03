@@ -269,12 +269,13 @@ img::selection {
   outline: 2px solid white;
   .img {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     background-color: #ffffff;
     // -webkit-filter: grayscale(0);
     // filter: grayscale(0);
     .button-group {
       inset: 0;
+      // bottom: 0;
       background-color: transparentize($color: $black, $amount: 0.3);
       position: absolute;
       opacity: 0;
@@ -284,8 +285,7 @@ img::selection {
       // -webkit-filter: grayscale(1);
       // filter: grayscale(1);
       img {
-        scale: 1.1;
-        transform: translateX(-20px) translateY(-20px);
+        scale: 1.05;
       }
       .button-group {
         opacity: 1;

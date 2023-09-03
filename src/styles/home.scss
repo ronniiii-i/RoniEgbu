@@ -39,12 +39,42 @@
 #about {
   border-top: 1px solid transparentize($color: $white, $amount: 0.9);
   border-bottom: 1px solid transparentize($color: $white, $amount: 0.9);
-  .text p{
+  .text p {
     font-size: 1.1rem;
   }
-  .skills{
-    h3{
-        text-align: center;
+  .skills {
+    h3 {
+      text-align: center;
     }
+  }
+}
+#projects {
+  h2 {
+    margin-block: 1rem;
+    text-align: center;
+  }
+  h2 ~ p {
+    text-align: center;
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .portfolio-container {
+    padding: 3vw 0;
+  }
+}
+#cta {
+  padding: 3vw;
+  width: 100%;
+  max-width: 60rem;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
