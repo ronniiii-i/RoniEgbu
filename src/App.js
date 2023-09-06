@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FaTwitter } from "react-icons/fa";
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Router>
+      <Nav />
         <p className="date">{formattedDate}</p>
         <Routes>
           <Route exact path="/" element={<Home />} />
