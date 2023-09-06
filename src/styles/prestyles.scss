@@ -294,6 +294,8 @@ img::selection {
     }
   }
   .project-details {
+    height: inherit;
+    position: relative;
     padding: 0 1vw;
     h3,
     p,
@@ -302,12 +304,31 @@ img::selection {
     }
     p {
       font-size: 1.1rem;
+      // padding-bottom: 3rem;
     }
     .flex {
       gap: 0.5rem;
       * {
         font-family: $sans;
       }
+    }
+    .technologies{
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+      // right: 0;
+      a{
+        margin-top: .5rem;
+        background-color: $white;
+        padding: 5px 10px;
+        color: $black;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .button-group.flex:last-child{
+      display: none;
     }
   }
 }

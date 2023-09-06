@@ -6,19 +6,27 @@
 
 .date {
   text-transform: uppercase;
-  letter-spacing: 2.8rem;
-  width: 100%;
+  letter-spacing: 2vw;
+  max-width: 100%;
   text-align: center;
   margin: 3rem auto 0;
+  padding: 0 2vw;
+  white-space: nowrap; /* Prevent line breaks */
   height: auto;
   white-space: pre;
   font-style: normal;
   font-family: "Zilla Slab", "Zilla Slab Placeholder", serif;
-//   letter-spacing: 3em;
+  // letter-spacing: 3em;
   line-height: 1.4;
 }
 footer {
   text-align: center;
   width: 100%;
   padding: 2vw;
+}
+
+@media screen and (max-width: 400px) {
+  .date{
+    letter-spacing: 1vw;
+  }
 }
