@@ -6,20 +6,20 @@ const ProjectCard = ({ project, handleSelectTag }) => {
       <div className="img flex justify-center align-center">
         <img src={project.image} alt={project.title} />
         <div className="button-group flex justify-evenly align-center">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
             View Demo
           </a>
-          <a
-            href={project.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          > 
-            View Source
-          </a>
+          {project.sourceUrl === "" ? (
+            ""
+          ) : (
+            <a
+              href={project.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source
+            </a>
+          )}
         </div>
       </div>
       <div className="project-details">
@@ -37,20 +37,20 @@ const ProjectCard = ({ project, handleSelectTag }) => {
           ))}
         </div>
         <div className="button-group flex align-center">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
             View Demo
           </a>
-          <a
-            href={project.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Source
-          </a>
+          {project.sourceUrl === "" ? (
+            ""
+          ) : (
+            <a
+              href={project.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source
+            </a>
+          )}
         </div>
       </div>
     </div>
