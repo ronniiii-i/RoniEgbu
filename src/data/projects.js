@@ -62,7 +62,7 @@ const projectsData = [
       title: "UC Braids",
       description: "Your Destination for Professional Hair Braiding Services",
       image: "https://res.cloudinary.com/qaz2dc/image/upload/v1694017717/Portfolio%20Images/thumbs/ucbraids_thumb_joefjk.png",
-      technologies: ["React", "Node.js", "Express"],
+      technologies: ["React", "SCSS", "Firebase"],
       demoUrl: "https://ucbraids.vercel.app/",
       sourceUrl: "",
     },
