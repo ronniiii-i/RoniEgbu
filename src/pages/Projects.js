@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { ThreeDots } from "react-loader-spinner";
 import projectsData from "../data/projects";
 import Card from "../components/ProjectCard";
 
 function Projects() {
   const [selectedTag, setSelectedTag] = useState(null);
   const [select, setSelect] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
   const toggleDropdown = () => {
-    setSelect(!select)
-  }
+    setSelect(!select);
+  };
 
   const getAllTechnologies = (data) => {
     const allTechnologies = [];
@@ -28,17 +31,23 @@ function Projects() {
   };
   const technologies = getAllTechnologies(projectsData);
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      const filtered = selectedTag
+        ? projectsData.filter((project) =>
+            project.technologies.includes(selectedTag)
+          )
+        : projectsData;
+
+      setFilteredProjects(filtered);
+    }, 1000);
+  }, [selectedTag]);
 
   function handleSelectTag(tag) {
     setSelectedTag(tag);
-    console.log(tag, "hi");
   }
-
-  const filteredProjects = selectedTag
-    ? projectsData.filter((project) =>
-        project.technologies.includes(selectedTag)
-      )
-    : projectsData;
 
   return (
     <main id="project">
@@ -61,15 +70,28 @@ function Projects() {
             </ul>
           </div>
         </div>
-        <div className="portfolio-container flex wrap">
-          {filteredProjects.map((project) => (
-            <Card
-              project={project}
-              handleSelectTag={handleSelectTag}
-              key={project.id}
-            />
-          ))}
-        </div>
+        {loading ? (
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color="#ffffff"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName="loader"
+            visible={true}
+          />
+        ) : (
+          <div className="portfolio-container flex wrap">
+            {filteredProjects.map((project) => (
+              <Card
+                project={project}
+                handleSelectTag={handleSelectTag}
+                key={project.id}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </main>
   );
