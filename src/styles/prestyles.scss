@@ -179,8 +179,9 @@ img::selection {
 .grid {
   display: grid;
 }
-.g-2-col-equal {
-  grid-template-columns: 50% 50%;
+.g-af3 {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 2rem;
 }
 .g-af {
   display: grid;

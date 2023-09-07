@@ -76,7 +76,7 @@ function Home() {
           designs, intricate code, and captivating visuals. Each project
           reflects my skills and dedication.
         </p>
-        <div class="portfolio-container grid g-af">
+        <div className="portfolio-container grid g-af">
           {shuffledData.slice(0, 3).map((project) => (
             <Card project={project} key={project.id} />
           ))}

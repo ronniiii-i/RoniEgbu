@@ -1,0 +1,71 @@
+#project {
+  padding-top: 3vw;
+  h1 {
+    text-align: center;
+  }
+  #projects {
+    .sort {
+      margin: auto;
+      .custom-select {
+        padding: .5rem 1rem;
+        cursor: pointer;
+        position: relative;
+        width: 8rem;
+        border: 1px solid $white;
+        z-index: 9;
+        .selected p{
+            font-size: 1.1rem;
+        }
+        .tags {
+          gap: 1rem;
+          background-color: $black;
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          height: 0px;
+          &.open{
+            height: calc( 22rem + 10px);
+            border: 1px solid $white;
+          }
+          li{
+            padding: .5rem 1rem;
+            border-bottom: 1px solid $white;
+            &:last-child{
+                border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+    .portfolio-container {
+      column-gap: 2%;
+      row-gap: 2rem;
+      .project-card {
+        width: 32%;
+        min-width: 280px;
+      }
+    }
+  }
+  @media screen and (max-width: 911px) {
+    #projects {
+      .portfolio-container {
+        column-gap: 3%;
+        .project-card {
+          width: 48.5%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 601px) {
+    #projects {
+      .portfolio-container {
+        column-gap: 0;
+        .project-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
