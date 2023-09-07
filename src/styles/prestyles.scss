@@ -260,12 +260,6 @@ img::selection {
 }
 
 .project-card {
-  // background: rgba(255, 255, 255, 0.25);
-  // // box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-  // box-shadow: 24px 24px 47px rgb(0, 0, 0, 0.2), -24px -24px 47px #000000;
-  // backdrop-filter: blur(4.5px);
-  // -webkit-backdrop-filter: blur(4.5px);
-  // border-radius: 10px;
   overflow: hidden;
   outline: 2px solid white;
   .img {
@@ -314,10 +308,6 @@ img::selection {
       }
     }
     .technologies{
-      // position: absolute;
-      // bottom: 0;
-      // left: 0;
-      // right: 0;
       a{
         margin-top: .5rem;
         background-color: $white;
