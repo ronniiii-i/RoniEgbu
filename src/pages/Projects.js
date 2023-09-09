@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { MdTune } from "react-icons/md";
 import { ThreeDots } from "react-loader-spinner";
 import projectsData from "../data/projects";
 import Card from "../components/ProjectCard";
@@ -54,7 +55,9 @@ function Projects() {
       <h1>My Projects</h1>
       <section id="projects">
         <div className="sort flex align-center justify-between">
-          <h3>SORT</h3>
+          <h3 className="flex align-center">Filter
+            <MdTune />
+          </h3>
           <div className="custom-select" onClick={() => toggleDropdown()}>
             <div className="selected flex align-center justify-between">
               <p>{selectedTag == null ? "None" : selectedTag}</p>

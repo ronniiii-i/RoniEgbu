@@ -6,6 +6,12 @@
   #projects {
     .sort {
       margin: auto;
+      h3{
+        font-weight: 400;
+        svg{
+          align-self: flex-end;
+        }
+      }
       .custom-select {
         padding: 0.5rem 1rem;
         cursor: pointer;
