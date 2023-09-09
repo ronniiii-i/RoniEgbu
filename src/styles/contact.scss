@@ -1,0 +1,32 @@
+#contact{
+    padding: 2vw;
+    h1{
+        text-align: center;
+    }
+    form{
+        margin: 2rem auto;
+        width: 100%;
+        max-width: 40rem;
+        input, textarea{
+            display: block;
+            background-color: transparent;
+            padding: .5rem 1rem;
+            border: 2px solid $white;
+            color: $white;
+            font-family: $sans;
+            width: 100%;
+            &::placeholder{
+                color: transparentize($color: $white, $amount: 0.4);
+                font-weight: 600;
+            }
+        }
+        .g-af{
+            gap: 1.5rem;
+        }
+        textarea{
+            margin-block: 1.5rem;
+            resize: none;
+            height: 10rem;
+        }
+    }
+}
