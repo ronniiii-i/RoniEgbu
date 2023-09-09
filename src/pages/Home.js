@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"
+import { TypeAnimation } from "react-type-animation";
 
 import Card from "../components/ProjectCard";
 
@@ -26,7 +26,23 @@ function Home() {
     <main>
       <section id="hero">
         <div className="text">
-          <h1>Roni’s Portfolio</h1>
+          <h1>
+            <TypeAnimation
+            preRenderFirstString={true}
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Hi! I'm Roni",
+                1000,
+                "Welcome!",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              // deletionSpeed={90}
+              style={{ display: "inline-block" }}
+              repeat={Infinity}
+            />
+          </h1>
           <p>
             Welcome to Roni's corner of the web, where the art of functional
             frontend development takes center stage. Explore a world of digital
