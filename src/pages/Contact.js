@@ -1,8 +1,10 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
+  const [isSuccess, setIsSuccess] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,9 +19,14 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          setIsSuccess(true); // Set a state variable to indicate success
+          setErrorMessage(""); // Clear any previous error messages
+          form.current.reset(); // Reset the form to clear the inputs
         },
         (error) => {
           console.log(error.text);
+          setIsSuccess(false);
+          setErrorMessage("Failed to send email. Please try again."); // Set the error message
         }
       );
   };
@@ -27,6 +34,22 @@ function Contact() {
   return (
     <main id="contact">
       <h1>Contact</h1>
+      {isSuccess === true && (
+        <div className="success flex align-center justify-center">
+          <div className="content flex column align-center justify-center">
+            <button onClick={()=>{setIsSuccess(null)}}>╳</button>
+            <p>Email Sent Successfully!</p>
+          </div>
+        </div>
+      )}
+      {isSuccess === false && (
+        <div className="error flex align-center justify-center">
+        <div className="content flex column align-center justify-center">
+          <button onClick={()=>{setIsSuccess(null)}}>╳</button>
+          <p>{errorMessage}</p>
+        </div>
+        </div>
+      )}
       <form ref={form} onSubmit={sendEmail}>
         <div className="g-af">
           <input name="name" type="text" placeholder="Your Name" />

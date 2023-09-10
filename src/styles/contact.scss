@@ -33,4 +33,26 @@
       height: 10rem;
     }
   }
+  .success,.error{
+    position: fixed;
+    inset: 0;
+    background-color: transparentize($color: $black, $amount: 0.4);
+    padding: 2vw;
+    .content{
+      position: relative;
+      width: 100%;
+      max-width: 30rem;
+      background-color: $black;
+      height: 20rem;
+      outline: 2px solid $white;
+      button{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background: transparent;
+        font-size: 1.5rem;
+        border: none;
+      }
+    }
+  }
 }
