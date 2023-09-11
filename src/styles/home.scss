@@ -42,6 +42,7 @@
 #about {
   border-top: 1px solid transparentize($color: $white, $amount: 0.9);
   border-bottom: 1px solid transparentize($color: $white, $amount: 0.9);
+  align-items: center;
   .text p {
     font-size: 1.1rem;
   }
@@ -49,11 +50,53 @@
     h3 {
       text-align: center;
     }
-    .flex{
-      div{
-        width: 20%;
-        max-width: 2rem;
-        min-width: 1.5rem;
+    .flex {
+      padding: 1rem;
+      gap: 1rem;
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      div {
+        svg {
+          font-size: 3rem;
+          transition: all .1s;
+        }
+        &.html:hover {
+          svg {
+            fill: #e34c26;
+          }
+        }
+        &.css:hover {
+          svg {
+            fill: #2965f1;
+          }
+        }
+        &.js:hover {
+          svg {
+            fill: #f0db4f;
+          }
+        }
+        &.react:hover {
+          svg {
+            fill: #61dbfb;
+            animation: rotate 3s linear infinite;
+          }
+        }
+        &.sass:hover {
+          svg {
+            fill: #cc6699;
+          }
+        }
+        &.git:hover {
+          svg {
+            fill: #f34f29;
+          }
+        }
       }
     }
   }
