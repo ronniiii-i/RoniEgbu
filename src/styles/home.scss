@@ -49,6 +49,13 @@
     h3 {
       text-align: center;
     }
+    .flex{
+      div{
+        width: 20%;
+        max-width: 2rem;
+        min-width: 1.5rem;
+      }
+    }
   }
 }
 #projects {
@@ -83,33 +90,33 @@
 }
 
 @media screen and (max-width: 650px) {
-  #hero{
-    .text{
-      p{
+  #hero {
+    .text {
+      p {
         min-width: 95%;
       }
     }
   }
 }
 @media screen and (max-width: 400px) {
-  #hero{
-    .text{
-      h1 span{
+  #hero {
+    .text {
+      h1 span {
         font-size: calc(3.7rem + 2.5vw);
       }
-      p{
+      p {
         font-size: 1.1rem;
       }
     }
   }
 }
 @media screen and (max-width: 320px) {
-  #hero{
-    .text{
-      h1 span{
+  #hero {
+    .text {
+      h1 span {
         font-size: calc(3.2rem + 2.5vw);
       }
-      p{
+      p {
         font-size: 1rem;
       }
     }

@@ -1,8 +1,8 @@
 @import "./styles/prestyles";
-@import './styles/nav';
+@import "./styles/nav";
 @import "./styles/home";
-@import './styles/projects';
-@import './styles/contact';
+@import "./styles/projects";
+@import "./styles/contact";
 
 .date {
   text-transform: uppercase;
@@ -22,10 +22,37 @@ footer {
   text-align: center;
   width: 100%;
   padding: 2vw;
+  .icons {
+    gap: 1rem;
+    padding-right: 2vw;
+    a {
+      // font-size: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      svg {
+        font-size: 1.55rem;
+      }
+      &:first-child:hover {
+        svg {
+          fill: #1d9bf0;
+        }
+      }
+      &:last-child:hover {
+        background-color: white;
+        svg {
+          fill: #171515;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 400px) {
-  .date{
+  .date {
     letter-spacing: 1vw;
   }
 }

@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import Card from "../components/ProjectCard";
 
 import projectsData from "../data/projects";
+import { FaCss3Alt, FaHtml5, FaReact, FaSass, FaGitAlt } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si"
 
 function Home() {
   const [shuffledData, setShuffledData] = useState([]);
@@ -28,7 +30,7 @@ function Home() {
         <div className="text">
           <h1>
             <TypeAnimation
-            preRenderFirstString={true}
+              preRenderFirstString={true}
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "Hi! I'm Roni",
@@ -76,12 +78,26 @@ function Home() {
         </div>
         <div className="skills">
           <h3>Frontend Skills</h3>
-          <div className="html"></div>
-          <div className="css"></div>
-          <div className="js"></div>
-          <div className="react"></div>
-          <div className="sass"></div>
-          <div className="git"></div>
+          <div className="flex align-center justify-center wrap">
+            <div className="html">
+              <FaHtml5 />
+            </div>
+            <div className="css">
+              <FaCss3Alt />
+            </div>
+            <div className="js">
+              <SiJavascript />
+            </div>
+            <div className="react">
+              <FaReact />
+            </div>
+            <div className="sass">
+              <FaSass />
+            </div>
+            <div className="git">
+              <FaGitAlt />
+            </div>
+          </div>
         </div>
       </section>
       {/* Portfolio section */}
