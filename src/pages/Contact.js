@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import error from "../img/error.gif"
+import check from "../img/check.gif"
+
 function Contact() {
   const form = useRef();
   const [isSuccess, setIsSuccess] = useState(null);
@@ -38,6 +41,7 @@ function Contact() {
         <div className="success flex align-center justify-center">
           <div className="content flex column align-center justify-center">
             <button onClick={()=>{setIsSuccess(null)}}>╳</button>
+            <img src={check} alt="Success" />
             <p>Email Sent Successfully!</p>
           </div>
         </div>
@@ -46,6 +50,7 @@ function Contact() {
         <div className="error flex align-center justify-center">
         <div className="content flex column align-center justify-center">
           <button onClick={()=>{setIsSuccess(null)}}>╳</button>
+          <img src={error} alt="Error" />
           <p>{errorMessage}</p>
         </div>
         </div>
