@@ -5,8 +5,6 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
-  FaGithub,
-  FaGithubAlt,
   FaGithubSquare,
   FaTwitter,
 } from "react-icons/fa";
