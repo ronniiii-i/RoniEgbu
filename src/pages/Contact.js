@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import error from "../img/error.gif"
-import check from "../img/check.gif"
+import error from "../img/error.gif";
+import check from "../img/check.gif";
 
 function Contact() {
   const form = useRef();
@@ -40,7 +40,13 @@ function Contact() {
       {isSuccess === true && (
         <div className="success flex align-center justify-center">
           <div className="content flex column align-center justify-center">
-            <button onClick={()=>{setIsSuccess(null)}}>╳</button>
+            <button
+              onClick={() => {
+                setIsSuccess(null);
+              }}
+            >
+              ╳
+            </button>
             <img src={check} alt="Success" />
             <p>Email Sent Successfully!</p>
           </div>
@@ -48,20 +54,26 @@ function Contact() {
       )}
       {isSuccess === false && (
         <div className="error flex align-center justify-center">
-        <div className="content flex column align-center justify-center">
-          <button onClick={()=>{setIsSuccess(null)}}>╳</button>
-          <img src={error} alt="Error" />
-          <p>{errorMessage}</p>
-        </div>
+          <div className="content flex column align-center justify-center">
+            <button
+              onClick={() => {
+                setIsSuccess(null);
+              }}
+            >
+              ╳
+            </button>
+            <img src={error} alt="Error" />
+            <p>{errorMessage}</p>
+          </div>
         </div>
       )}
       <form ref={form} onSubmit={sendEmail}>
         <div className="g-af">
-          <input name="name" type="text" placeholder="Your Name" />
-          <input name="email" type="email" placeholder="Your Email" />
+          <input name="name" type="text" placeholder="Your Name" required j/>
+          <input name="email" type="email" placeholder="Your Email" required j/>
         </div>
-        <input type="text" name="subject" placeholder="Subject" />
-        <textarea name="message" placeholder="Your Message"></textarea>
+        <input type="text" name="subject" placeholder="Subject" required j/>
+        <textarea name="message" placeholder="Your Message" requiredj></textarea>
         <button className="button button-primary">Send</button>
       </form>
     </main>
