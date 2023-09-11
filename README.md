@@ -1,14 +1,6 @@
 # My Portfolio
 
-Welcome to my portfolio! Here you'll find a collection of my recent projects and contact information.
-
-## Projects
-
-Explore some of my recent projects:
-
-1. [Project Name 1](Project_1_Link) - Brief description.
-2. [Project Name 2](Project_2_Link) - Brief description.
-3. [Project Name 3](Project_3_Link) - Brief description.
+Welcome to my portfolio!
 
 ## Skills
 
