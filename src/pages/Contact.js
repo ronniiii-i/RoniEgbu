@@ -69,11 +69,11 @@ function Contact() {
       )}
       <form ref={form} onSubmit={sendEmail}>
         <div className="g-af">
-          <input name="name" type="text" placeholder="Your Name" required j/>
-          <input name="email" type="email" placeholder="Your Email" required j/>
+          <input name="name" type="text" placeholder="Your Name" required />
+          <input name="email" type="email" placeholder="Your Email" required />
         </div>
-        <input type="text" name="subject" placeholder="Subject" required j/>
-        <textarea name="message" placeholder="Your Message" requiredj></textarea>
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button className="button button-primary">Send</button>
       </form>
     </main>
