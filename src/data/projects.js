@@ -6,7 +6,7 @@ const projectsData = [
         "A web app to keep track of your courses. Option to download as PDF available",
       image: "https://res.cloudinary.com/qaz2dc/image/upload/v1678302578/Portfolio%20Images/thumbs/courselist_p3ito3.png",
       technologies: ["HTML", "CSS", "JavaScript"],
-      demoUrl: "https://ronniiii-i.github.io/projects/courselist/",
+      demoUrl: "https://courselist-beta.vercel.app/",
       sourceUrl:
         "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/courselist",
     },
@@ -25,7 +25,7 @@ const projectsData = [
       description: "A drag and drop todo app",
       image: "https://res.cloudinary.com/qaz2dc/image/upload/v1678302579/Portfolio%20Images/thumbs/todo_dhtcsw.png",
       technologies: ["HTML", "CSS", "JavaScript"],
-      demoUrl: "https://ronniiii-i.github.io/projects/todo-app-main/",
+      demoUrl: "https://todo-app-dg.vercel.app/",
       sourceUrl:
         "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/todo-app-main",
     },
@@ -44,7 +44,7 @@ const projectsData = [
       description: "Generate new advice everytime the dice is clicked",
       image: "https://res.cloudinary.com/qaz2dc/image/upload/v1678302578/Portfolio%20Images/thumbs/advice_vebezj.png",
       technologies: ["HTML", "CSS", "JavaScript", "API"],
-      demoUrl: "https://ronniiii-i.github.io/projects/advice-generator-app/",
+      demoUrl: "https://advice-generator-app-fmc.vercel.app//",
       sourceUrl:
         "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/advice-generator-app",
     },
