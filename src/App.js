@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -52,6 +53,7 @@ function App() {
           </div>
         </footer>
       </Router>
+      <Analytics />
     </>
   );
 }
